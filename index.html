@@ -12,7 +12,28 @@
             <h1>Welcome to our official website</h1>
         </header>
 
-        <main background-color: blue;>
+        <main>
+            <script>
+                const owner = "AdvanturePie";
+                const repo = "jekida-site";
+                
+                fetch(`https://api.github.com/repos/${owner}/${repo}/commits`)
+                .then(response => response.json())
+                .then(commits => {
+                    const timeline = document.getElementById("timeline");
+                    commits.forEach(commit => {
+                        const div = document.createElement("div");
+                        div.className = "commit";
+                        div.innerHTML = `
+                        <strong>${commit.commit.message}</strong><br>
+                        <time>${new Date(commit.commit.author.date).toLocaleString()}</time><br>
+                        by <em>${commit.commit.author.name}</em>
+                        `;
+                        timeline.appendChild(div);
+                    });
+                });
+            </script>
+
             <h3>Dear Diary,</h3>
             <h3>Today my friend Jeremy ❗️</h3>
             <h3>visited my house. He is</h3>
