@@ -5,3 +5,28 @@
 body {
   background-color: grey;
 }
+
+#timeline {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.commit {
+  position: relative;
+  background: #fdfdfd;
+  border: 1px solid #ddd;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.commit:hover {
+  transform: scale(1.01);
+}
+
+.commit a:hover {
+  text-decoration: underline;
+}
