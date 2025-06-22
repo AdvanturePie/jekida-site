@@ -6,6 +6,13 @@ body {
   background-color: grey;
 }
 
+.timeline-wrapper {
+  overflow-x: auto;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
 #timeline {
   display: flex;
   flex-direction: row;
