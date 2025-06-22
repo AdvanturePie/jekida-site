@@ -11,7 +11,7 @@ fetch(`https://api.github.com/repos/${owner}/${repo}/commits?per_page=100`)
   .catch(error => {
     const timeline = document.getElementById("timeline");
     if (timeline) {
-      timeline.innerText = "Fout bij het laden van commits 😢";
+      timeline.innerText = "Error while loading commits 😢";
     }
     console.error(error);
   });
