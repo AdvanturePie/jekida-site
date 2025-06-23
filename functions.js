@@ -28,8 +28,8 @@ function renderCommits(commits) {
     div.innerHTML = `
       <strong>${commit.commit.message}</strong><br>
       <time>${new Date(commit.commit.author.date).toLocaleString()}</time><br>
-      door <em>${commit.commit.author.name}</em><br>
-      <a href="${commit.html_url}" target="_blank">Bekijk commit ↗️</a>
+      by <em>${commit.commit.author.name}</em><br>
+      <a href="${commit.html_url}" target="_blank">View commit</a>
     `;
     timeline.appendChild(div);
   });

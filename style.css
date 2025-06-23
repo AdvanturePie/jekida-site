@@ -6,18 +6,31 @@ body {
   background-color: grey;
 }
 
-.timeline-wrapper {
-  overflow-x: auto;
-  max-width: 100%;
-  border: 1px solid #ccc;
-  padding: 1rem;
-}
-
 #timeline {
   display: flex;
   flex-direction: row;
-  gap: 4px;
+  gap: 6px;
   margin-top: 2rem;
+  overflow-x: auto;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  padding: 4px;
+}
+
+.commit {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  position: relative;
+  background: rgba(172, 172, 172, 0.734);
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.commit:hover {
+  background: white;
+  transform: scale(1.02);
+  transition: background-color 0.2s ease;
 }
 
 #navigation {
@@ -27,29 +40,21 @@ body {
 }
 
 .navbtns {
+  display: inline-block;
+  padding: 10px 16px;
   margin: 0 10px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0 10px;
+}
+
+.navbtns:hover {
+  background-color: rgb(123, 192, 238);
 }
 
 #jeremyshi {
   background-color: yellow;
   border-radius: 10px;
   padding: 2px 10px 2px 10px;
-}
-
-.commit {
-  position: relative;
-  background: #fdfdfd;
-  border: 1px solid #ddd;
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
-}
-
-.commit:hover {
-  transform: scale(1.01);
-}
-
-.commit a:hover {
-  text-decoration: underline;
 }
