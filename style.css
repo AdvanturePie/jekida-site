@@ -33,23 +33,34 @@ body {
   transition: background-color 0.2s ease;
 }
 
-#navigation {
-  background-color: antiquewhite;
-  padding: 10px;
-  margin: 10px 0px;
+.navbar {
+  /* background-color: antiquewhite; */
+  /* padding: 10px; */
+  margin: 0px;
 }
 
-.navbtns {
-  display: inline-block;
-  padding: 10px 16px;
-  margin: 0 10px;
+.navbar ul {
+  list-style-type: none;
+  background-color: antiquewhite;
+  overflow: hidden;
+  /* margin: 0; */
+  padding: 0px;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar a{
+  display: block;
+  padding: 15px;
   text-decoration: none;
   transition: background-color 0.2s ease;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin: 0 10px;
+  text-align: center;
 }
 
-.navbtns:hover {
+.navbar a:hover {
   background-color: rgb(123, 192, 238);
 }
 
